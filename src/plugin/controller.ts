@@ -2,11 +2,13 @@ figma.showUI(__html__);
 
 figma.ui.onmessage = msg => {
     if (msg.type === 'create-latex-svg') {
-        const svg = figma.createNodeFromSvg(msg.svg);
-        svg.children.forEach(child => {
-            child.name = msg.source;
-            figma.currentPage.appendChild(child);
-        });
+        const node = figma.createNodeFromSvg(msg.svg);
+        const svg = node.children[0];
+        svg.name = msg.source;
+        figma.currentPage.appendChild(svg);
+        figma.currentPage.selection = [svg];
+        figma.viewport.scrollAndZoomIntoView([svg]);
+        node.remove();
     }
     if (msg.type === 'create-rectangles') {
         const nodes = [];

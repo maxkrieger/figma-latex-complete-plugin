@@ -73,6 +73,7 @@ const App = ({}) => {
                 wrapEnabled={true}
                 enableBasicAutocompletion={true}
                 enableSnippets={true}
+                placeholder="Type your math-mode LaTeX here..."
             />
             <div
                 style={{
