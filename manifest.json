@@ -1,0 +1,7 @@
+{
+    "name": "LaTeX Complete",
+    "id": "00000001",
+    "api": "1.0.0",
+    "main": "dist/code.js",
+    "ui": "dist/ui.html"
+}
