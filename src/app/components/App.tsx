@@ -23,7 +23,7 @@ const App = ({}) => {
         const svg = new SVG({fontCache: 'none'});
         const html = mathjax.document('', {InputJax: tex, OutputJax: svg});
         const cv = (input: string) => {
-            const node = html.convert(input);
+            const node = html.convert(input, {});
             return adaptor.innerHTML(node);
         };
         setConvert(() => cv);
@@ -42,7 +42,7 @@ const App = ({}) => {
     const onCreate = React.useCallback(() => {
         // const count = parseInt(textbox.current.value, 10);
         const node = convert(code);
-        parent.postMessage({pluginMessage: {type: 'create-latex-svg', svg: node, source: code}}, '*');
+        parent.postMessage({pluginMessage: {type: 'create-latex-svg', svg: node, source: code, scale: 200}}, '*');
     }, [convert, code]);
 
     const onCancel = React.useCallback(() => {
@@ -72,7 +72,7 @@ const App = ({}) => {
                 focus={true}
                 wrapEnabled={true}
                 enableBasicAutocompletion={true}
-                enableSnippets={true}
+                enableLiveAutocompletion={true}
                 placeholder="Type your math-mode LaTeX here..."
             />
             <div
@@ -87,10 +87,12 @@ const App = ({}) => {
                 }}
                 dangerouslySetInnerHTML={{__html: preview}}
             />
-            <button className="primary" onClick={onCreate}>
-                Create
-            </button>
-            <button onClick={onCancel}>Cancel</button>
+            <div style={{padding: '10px'}}>
+                <button className="primary" onClick={onCreate}>
+                    Create
+                </button>
+                <button onClick={onCancel}>Cancel</button>
+            </div>
         </div>
     );
 };

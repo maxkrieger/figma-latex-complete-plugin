@@ -1,6 +1,5 @@
 body {
     font: 12px sans-serif;
-    margin: 20px;
 }
 button {
     border-radius: 5px;
@@ -24,9 +23,3 @@ button:focus {
 .primary:focus {
     box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.3);
 }
-
-/* div.CodeMirror-cursors {
-    visibility: visible !important;
-    position: relative !important;
-    z-index: 3 !important;
-} */
