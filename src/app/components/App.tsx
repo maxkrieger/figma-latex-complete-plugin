@@ -9,7 +9,12 @@ import AceEditor from 'react-ace';
 
 import 'ace-builds/src-noconflict/mode-latex';
 import 'ace-builds/src-noconflict/theme-textmate';
+import 'ace-builds/src-noconflict/ext-searchbox';
+import langTools from 'ace-builds/src-noconflict/ext-language_tools';
 import '../styles/ui.css';
+
+import symbols from '../../symbols.json';
+import {Range} from 'ace-builds';
 
 declare function require(path: string): any;
 
@@ -49,6 +54,30 @@ const App = ({}) => {
         parent.postMessage({pluginMessage: {type: 'cancel'}}, '*');
     }, []);
 
+    const onLoad = React.useCallback(() => {
+        langTools.setCompleters([
+            {
+                // @ts-ignore
+                getCompletions: (e, session, pos, prefix, cb) => {
+                    if (prefix.length === 0) {
+                        cb(null, []);
+                        return;
+                    }
+                    const preceding = session.getTextRange(new Range(pos.row, pos.column - 2, pos.row, pos.column - 1));
+                    const filtered = symbols
+                        .filter((symbol: string) => symbol.includes(prefix))
+                        .map((symbol: string) => ({
+                            caption: symbol,
+                            value: preceding === '\\' ? symbol.substring(1) : symbol,
+                            meta: 'LaTeX',
+                        }));
+                    cb(null, filtered);
+                },
+                activated: true,
+            },
+        ]);
+    }, []);
+
     React.useEffect(() => {
         // This is how we read messages sent from the plugin controller
         window.onmessage = event => {
@@ -67,11 +96,12 @@ const App = ({}) => {
                 onChange={onChange}
                 value={code}
                 width="100%"
-                height="75px"
+                height="65px"
                 showGutter={false}
                 focus={true}
                 wrapEnabled={true}
-                enableBasicAutocompletion={true}
+                onLoad={onLoad}
+                enableBasicAutocompletion={false}
                 enableLiveAutocompletion={true}
                 placeholder="Type your math-mode LaTeX here..."
             />
@@ -87,7 +117,7 @@ const App = ({}) => {
                 }}
                 dangerouslySetInnerHTML={{__html: preview}}
             />
-            <div style={{padding: '10px'}}>
+            <div style={{paddingTop: '10px'}}>
                 <button className="primary" onClick={onCreate}>
                     Create
                 </button>
