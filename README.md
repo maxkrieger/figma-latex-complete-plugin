@@ -21,3 +21,11 @@
 
 -   [ ] Adjustable size
 - [ ] Reduce package size via webpack magic
+
+## Related work
+
+
+https://www.figma.com/c/plugin/754622689958838972 (seems to be broken as of 01/06/2020)
+
+https://github.com/zindlerb/tex-block
+
