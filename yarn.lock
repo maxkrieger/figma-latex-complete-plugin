@@ -251,10 +251,15 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+ace-builds@^1.4.6, ace-builds@^1.4.7:
+  version "1.4.8"
+  resolved "https://registry.yarnpkg.com/ace-builds/-/ace-builds-1.4.8.tgz#d14be41d30294a2a12581f0bcfee4b696481ffdd"
+  integrity sha512-8ZVAxwyCGAxQX8mOp9imSXH0hoSPkGfy8igJy+WO/7axL30saRhKgg1XPACSmxxPA7nfHVwM+ShWXT+vKsNuFg==
+
 acorn@^6.2.1:
-  version "6.4.0"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.0.tgz#b659d2ffbafa24baf5db1cdbb2c94a983ecd2784"
-  integrity sha512-gac8OEcQ2Li1dxIEWGZzsp2BitJxwkwcOm0zHAJLcPJaVvm58FRnk6RkuLRpU1EujipU2ZFODv2P9DLMfnV8mw==
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
 
 ajv-errors@^1.0.0:
   version "1.0.1"
@@ -772,6 +777,11 @@ color-name@1.1.3:
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.3.tgz#a7d0558bd89c42f795dd42328f740831ca53bc25"
   integrity sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
 
+commander@*:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-5.0.0.tgz#dbf1909b49e5044f8fdaf0adc809f0c0722bdfd0"
+  integrity sha512-JrDGPAKjMGSP1G0DUoaceEJ3DZgAfr/q6X7FVk4+U5KxUSKviYGM2k6zWkfyyBHy5rAtzgYJFa1ro2O9PtoxwQ==
+
 commander@2.17.x:
   version "2.17.1"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.17.1.tgz#bd77ab7de6de94205ceacc72f1716d29f20a77bf"
@@ -1053,6 +1063,11 @@ detect-file@^1.0.0:
   resolved "https://registry.yarnpkg.com/detect-file/-/detect-file-1.0.0.tgz#f0d66d03672a825cb1b73bdb3fe62310c8e552b7"
   integrity sha1-8NZtA2cqglyxtzvbP+YjEMjlUrc=
 
+diff-match-patch@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/diff-match-patch/-/diff-match-patch-1.0.4.tgz#6ac4b55237463761c4daf0dc603eb869124744b1"
+  integrity sha512-Uv3SW8bmH9nAtHKaKSanOQmj2DnlH65fUpcrMdfdaOxUG02QQ4YGZ8AE7kKOMisF7UqvOlGKVYWRvezdncW9lg==
+
 diff@^3.2.0:
   version "3.5.0"
   resolved "https://registry.yarnpkg.com/diff/-/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
@@ -1247,6 +1262,11 @@ eslint-scope@^4.0.3:
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
+
+esm@^3.2.25:
+  version "3.2.25"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.2.25.tgz#342c18c29d56157688ba5ce31f8431fbb795cc10"
+  integrity sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==
 
 esprima@^4.0.0:
   version "4.0.1"
@@ -2328,6 +2348,16 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash.get@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/lodash.get/-/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
+  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
+
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash@^4.17.3:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
@@ -2406,6 +2436,20 @@ map-visit@^1.0.0:
   integrity sha1-7Nyo8TFE5mDxtb1B8S80edmN+48=
   dependencies:
     object-visit "^1.0.0"
+
+mathjax-full@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mathjax-full/-/mathjax-full-3.0.1.tgz#e9f7213fe75ab29dbbf52f141037a845a89b797e"
+  integrity sha512-KE4z2FF9PzKIHnK0HsMkThqLaOi+2DqN2T+QqqP465+vmCzftZyqXr7e6fp60xPC4nXTeMM1rcbBQJ9yjqwPAw==
+  dependencies:
+    esm "^3.2.25"
+    mj-context-menu "^0.2.2"
+    speech-rule-engine "^3.0.0-beta.8"
+
+mathjax@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/mathjax/-/mathjax-3.0.1.tgz#cb8f7a1342557e2b03fef0c13e43785dfeb00b9b"
+  integrity sha512-hrwOeKm3b1X4zpvLRSX89y3MZLRJTq0bSGIbo5M6BANOeGlL2z8Y8mZaKRFJ/WY4qcIrHp3f+Q9RWIaldOCUVg==
 
 md5.js@^1.3.4:
   version "1.3.5"
@@ -2551,6 +2595,11 @@ mixin-deep@^1.2.0:
   dependencies:
     for-in "^1.0.2"
     is-extendable "^1.0.1"
+
+mj-context-menu@^0.2.2:
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/mj-context-menu/-/mj-context-menu-0.2.2.tgz#446647475e22c6d83f7c6ff4afa37e66fd280784"
+  integrity sha512-OHlnKQqfFPEYZGdz2JWL0obrr82vVilha0WCUZslYfN+v+oz4VpmERnoHdTUWvOUVHNYjFkpOYnLEeHnt1BdsQ==
 
 mkdirp@^0.5.1:
   version "0.5.1"
@@ -3078,7 +3127,7 @@ promise-inflight@^1.0.1:
   resolved "https://registry.yarnpkg.com/promise-inflight/-/promise-inflight-1.0.1.tgz#98472870bf228132fcbdd868129bad12c3c029e3"
   integrity sha1-mEcocL8igTL8vdhoEputEsPAKeM=
 
-prop-types@^15.6.2:
+prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -3168,6 +3217,17 @@ randomfill@^1.0.3:
   dependencies:
     randombytes "^2.0.5"
     safe-buffer "^5.1.0"
+
+react-ace@^8.0.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/react-ace/-/react-ace-8.1.0.tgz#6680accb7306a1850e6ef4370a00f0007eadc8b4"
+  integrity sha512-n3rm9gRNZjLGlXJQ587RASOQCPn6WlcV2gjRYwvG3gyVpBf4pY6lh/uI9tDkx2zYdEKJUfnGbTmzEGL5yyDWuw==
+  dependencies:
+    ace-builds "^1.4.6"
+    diff-match-patch "^1.0.4"
+    lodash.get "^4.4.2"
+    lodash.isequal "^4.5.0"
+    prop-types "^15.7.2"
 
 react-dom@^16.8.6:
   version "16.8.6"
@@ -3594,6 +3654,15 @@ spdx-license-ids@^3.0.0:
   version "3.0.5"
   resolved "https://registry.yarnpkg.com/spdx-license-ids/-/spdx-license-ids-3.0.5.tgz#3694b5804567a458d3c8045842a6358632f62654"
   integrity sha512-J+FWzZoynJEXGphVIS+XEh3kFSjZX/1i9gFBaWQcB+/tmpe2qUsSBABpcxqxnAxFdiUFEgAX1bjYGQvIZmoz9Q==
+
+speech-rule-engine@^3.0.0-beta.8:
+  version "3.0.0-beta.8"
+  resolved "https://registry.yarnpkg.com/speech-rule-engine/-/speech-rule-engine-3.0.0-beta.8.tgz#f6b9ffc80f36bcdf95fff4bc3103ec20ba1373a2"
+  integrity sha512-gnNap93Xrz5ngIqa/BOaJGatC64B7dqDrXK/pr4yAaZAcW6tKVO5PwaTvw9QqVab86ad5scpA39Nxwhlb11tTg==
+  dependencies:
+    commander "*"
+    wicked-good-xpath "*"
+    xmldom-sre "^0.1.31"
 
 split-string@^3.0.1, split-string@^3.0.2:
   version "3.1.0"
@@ -4154,6 +4223,11 @@ which@^1.2.14, which@^1.2.9, which@^1.3.1:
   dependencies:
     isexe "^2.0.0"
 
+wicked-good-xpath@*:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/wicked-good-xpath/-/wicked-good-xpath-1.3.0.tgz#81b0e95e8650e49c94b22298fff8686b5553cf6c"
+  integrity sha1-gbDpXoZQ5JyUsiKY//hoa1VTz2w=
+
 worker-farm@^1.7.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/worker-farm/-/worker-farm-1.7.0.tgz#26a94c5391bbca926152002f69b84a4bf772e5a8"
@@ -4182,6 +4256,11 @@ wrappy@1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
   integrity sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+
+xmldom-sre@^0.1.31:
+  version "0.1.31"
+  resolved "https://registry.yarnpkg.com/xmldom-sre/-/xmldom-sre-0.1.31.tgz#10860d5bab2c603144597d04bf2c4980e98067f4"
+  integrity sha512-f9s+fUkX04BxQf+7mMWAp5zk61pciie+fFLC9hX9UVvCeJQfNHRHXpeo5MPcR0EUf57PYLdt+ZO4f3Ipk2oZUw==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
