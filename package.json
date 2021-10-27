@@ -1,10 +1,10 @@
 {
     "name": "figma-LaTeX-complete",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "Figma plugin to render LaTeX",
     "license": "ISC",
     "scripts": {
-        "build": "webpack",
+        "build": "webpack --mode=production && rm ./dist/ui.js",
         "build:watch": "webpack --mode=development --watch",
         "prettier:format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,json}' "
     },
