@@ -32,6 +32,13 @@ const App = ({}) => {
             return adaptor.innerHTML(node);
         };
         setConvert(() => cv);
+        onmessage = event => {
+            const msg = event.data.pluginMessage;
+            switch (msg.type) {
+                case 'source':
+                    setCode(msg.value);
+            }
+        };
     }, []);
 
     const [code, setCode] = React.useState('');
