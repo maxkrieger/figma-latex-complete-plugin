@@ -16,6 +16,8 @@ import '../styles/ui.css';
 import symbols from '../../symbols.json';
 import {Range} from 'ace-builds';
 
+import Corner from './Corner';
+
 declare function require(path: string): any;
 
 const App = ({}) => {
@@ -93,8 +95,9 @@ const App = ({}) => {
                 onChange={onChange}
                 value={code}
                 width="100%"
-                height="65px"
+                height="calc(55% - 25px)"
                 showGutter={false}
+                showPrintMargin={false}
                 focus={true}
                 wrapEnabled={true}
                 onLoad={onLoad}
@@ -104,7 +107,7 @@ const App = ({}) => {
             />
             <div
                 style={{
-                    height: '75px',
+                    height: 'calc(45% - 25px)',
                     width: '100%',
                     border: '1px solid gray',
                     display: 'flex',
@@ -114,12 +117,13 @@ const App = ({}) => {
                 }}
                 dangerouslySetInnerHTML={{__html: preview}}
             />
-            <div style={{paddingTop: '10px'}}>
+            <div style={{paddingTop: '10px', height: '50px'}}>
                 <button className="primary" onClick={onCreate}>
                     Create
                 </button>
                 <button onClick={onCancel}>Cancel</button>
             </div>
+            <Corner />
         </div>
     );
 };
