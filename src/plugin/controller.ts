@@ -15,7 +15,7 @@ figma.ui.onmessage = msg => {
         if (node.children.length !== 0) {
             const svg = <GroupNode>node.children[0];
             const selection = figma.currentPage.selection;
-            svg.setRelaunchData({edit: ''});
+            (svg as any).setRelaunchData({edit: ''});
             svg.resize(msg.scale, svg.height * (msg.scale / svg.width));
             if (selection.length !== 0 && selection[0].getPluginData('source') != '') {
                 const groupNode = <GroupNode>selection[0];

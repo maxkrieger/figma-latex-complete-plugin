@@ -5,5 +5,5 @@
     "main": "dist/code.js",
     "ui": "dist/ui.html",
     "editorType": ["figma", "figjam"],
-    "relaunchButtons": [{"command": "edit", "name": "Edit", "multipleSelection": false}]
+    "relaunchButtons": [{"command": "edit", "name": "Edit LaTeX", "multipleSelection": false}]
 }
